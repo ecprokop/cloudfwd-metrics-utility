@@ -16,6 +16,7 @@ def computeMetrics(filename):
     cookieViolations = 0 # sticky session violations
 
     file = open(filename, "r")
+    branch = file.readline()
 
     logging.info("Computing metrics on file " + filename)
 
@@ -82,7 +83,8 @@ def computeMetrics(filename):
     numAckIDsInRequest = numpy.array(numAckIDsInRequest).astype(numpy.float)
     numAcksReceivedWhenAtLeastOneReceived = numpy.array(numAcksReceivedWhenAtLeastOneReceived).astype(numpy.float)
 
-    print "RESULTS:\n"
+
+    print "RESULTS for branch=" + branch + ":\n"
 
     # number of requests
     print("\n********* Number of requests *********\n")
