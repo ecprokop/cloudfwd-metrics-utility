@@ -1,0 +1,1 @@
+utility hacked together to calculate some metrics from some logs. pushed to version control to more easily run on multiple machines
